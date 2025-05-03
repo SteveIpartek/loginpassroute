@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
-const setupApp = (app) => { // Asegúrate de que el nombre de la función sea setupApp
+const setupApp = (app) => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(session({
     secret: process.env.PALABRA_SECRETA || 'secretoSuperSecreto',
@@ -30,7 +30,7 @@ const verificarSesionMiddleware = (req, res, next) => {
 };
 
 module.exports = {
-  setupApp, // Exporta la función con el nombre setupApp
+  setupApp,
   validarPalabraMiddleware,
   verificarSesionMiddleware,
 };

@@ -10,7 +10,7 @@ const PORT = 4000;
 const middlewares = require('./middlewares');
 const routes = require('./routes');
 
-middlewares.setupApp(app); // Asegúrate de que la función exportada en middlewares.js se llame setupApp
+middlewares.setupApp(app);
 routes.setup(app);
 
 app.listen(PORT, () => {

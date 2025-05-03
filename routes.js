@@ -1,5 +1,5 @@
 const { verificarSesionMiddleware } = require('./middlewares');
-const middlewares = require('./middlewares'); // <--- Añade esta línea
+const middlewares = require('./middlewares');
 
 const setup = (app) => {
   app.get('/', (req, res) => {
